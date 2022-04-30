@@ -10,9 +10,9 @@ ProductTest();
 static void ProductTest()
 {
     ProductManager productManager = new ProductManager(new EFProductDal());
-    foreach (var item in productManager.GetAllByUnitPrice(50, 100))
+    foreach (var item in productManager.GetProductDetails())
     {
-        Console.WriteLine(item.ProductName);
+        Console.WriteLine(item.ProductName+ "=="+ item.CategoryName);
     }
 }
 
